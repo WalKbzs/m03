@@ -24,6 +24,13 @@ public class Exercici18 {
         int h_extra;
         double salario_extra;
         double salario_normal;
+        //impuesto
+        int salario_sin_impuestos = 500;
+        double salario_impuesto;
+        double impuestos = 0, impuestos_25;
+        //tope impuestos
+        double salario_tope_impuestos = 900;
+                
         Scanner sc = new Scanner (System.in);
         System.out.println("Pon las horas que trabajas semanalmente:");
         hora = sc.nextInt();
@@ -37,7 +44,28 @@ public class Exercici18 {
         else{
             salario = hora * T_NORMAL;
         }
-         System.out.println("Tu salario es... " + salario);
+         System.out.println("Tu salario bruto es... " + salario);
+         //tope impuestos
+         if (salario>salario_tope_impuestos){//he superado el tope y tengo que aplicar 45%
+             salario_tope_impuestos = salario - salario_tope_impuestos;
+             impuestos = salario_tope_impuestos * 0.45; //impuesto de lo que pasa del tope
+             salario_impuesto = salario_tope_impuestos - salario_sin_impuestos;
+             impuestos_25 = salario_impuesto * 0.25;
+             impuestos = impuestos + impuestos_25;
+         }
+
+        //impuestos
+         else if (salario>salario_sin_impuestos && salario < salario_tope_impuestos){
+             salario_impuesto = salario - salario_sin_impuestos;
+             impuestos = (salario_impuesto * 25)/100;
+             salario = salario - impuestos;  
+             System.out.println("Impuestos... " + impuestos);
+         }
+         else{//no hay impuestos; podria borrar el else porque no hace falta
+             impuestos = 0;
+         }
+         
+         System.out.println("Tu salario NETO es... " + salario);
     }
     
 }
