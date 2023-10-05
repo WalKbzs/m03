@@ -41,7 +41,7 @@ public class Exercici11 {
         else //també podria ser else if
         {//num2>num1
             System.out.println(num2 + " es superior a " + num1);
-            
+        
         }
         
         

@@ -17,15 +17,15 @@ public class Exercici5 {
      */
     public static void main(String[] args) {
         //declarar variables
-        double radio;
+        double radio; 
         double diametro;
         double longitud;
         double area;
         /*establecer valor a la variable radio 
         por consola con System.in
-         */
-        Scanner pantalla = new Scanner(System.in);
-
+        */
+        Scanner pantalla = new Scanner (System.in);
+        
         System.out.println("Valor del radio: ");
         radio = pantalla.nextInt();
         //calcular diametro para saber longitud
@@ -37,5 +37,5 @@ public class Exercici5 {
         System.out.println("La longitud de la circunferencia es... " + longitud);
         System.out.println("El area de la circunferencia es... " + area);
     }
-
+    
 }
