@@ -14,6 +14,7 @@ public class Exercici3 {
 
     /**
      * @param args the command line arguments
+     * Calcular el área del cuadrado cuyo lado se introduce por teclado
      */
     public static void main(String[] args) {
         //declarar variables

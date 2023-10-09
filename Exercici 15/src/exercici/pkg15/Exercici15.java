@@ -14,6 +14,7 @@ public class Exercici15 {
 
     /**
      * @param args the command line arguments
+     * lea tres números distintos y nos diga cuál es el mayor.
      */
     public static void main(String[] args) {
         //declarar variables

@@ -14,6 +14,8 @@ public class Exercici16 {
 
     /**
      * @param args the command line arguments
+     * lea una calificación numérica entre 0 y 10 y la transforma en 
+     * calificación alfabética, escribiendo el resultado.
      */
     public static void main(String[] args) {
         // declarar variable

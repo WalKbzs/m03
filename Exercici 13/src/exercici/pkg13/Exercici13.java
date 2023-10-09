@@ -14,6 +14,7 @@ public class Exercici13 {
 
     /**
      * @param args the command line arguments
+     * lee dos números y los visualiza en orden ascendente.
      */
     public static void main(String[] args) {
         //declarar variables

@@ -14,6 +14,8 @@ public class Exercici9 {
 
     /**
      * @param args the command line arguments
+     * pide la edad por teclado y nos muestra el mensaje de ?eres mayor de edad?
+     * o el mensaje de ?eres menor de edad?.
      */
     public static void main(String[] args) {
         //declarar variables

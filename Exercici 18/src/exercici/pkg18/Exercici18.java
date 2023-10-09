@@ -53,7 +53,6 @@ public class Exercici18 {
              impuestos_25 = salario_impuesto * 0.25;
              impuestos = impuestos + impuestos_25;
          }
-
         //impuestos
          else if (salario>salario_sin_impuestos && salario < salario_tope_impuestos){
              salario_impuesto = salario - salario_sin_impuestos;
@@ -64,7 +63,6 @@ public class Exercici18 {
          else{//no hay impuestos; podria borrar el else porque no hace falta
              impuestos = 0;
          }
-         
          System.out.println("Tu salario NETO es... " + salario);
     }
     

@@ -14,6 +14,8 @@ public class Exercici4 {
 
     /**
      * @param args the command line arguments
+     * que lea dos números, calcule y muestre el valor de sus suma, resta, 
+     * producto y división.
      */
     public static void main(String[] args) {
         //declarar variables
@@ -38,8 +40,7 @@ public class Exercici4 {
          System.out.println("La suma es... " + suma);
          System.out.println("La resta es... " + resta);
          System.out.println("El producto es... " + producto);
-         System.out.println("La division es... " + division);
-           
+         System.out.println("La division es... " + division);       
     }
     
 }

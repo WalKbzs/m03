@@ -14,6 +14,7 @@ public class Exercici11 {
 
     /**
      * @param args the command line arguments
+     * lee 2 números y muestra el mayor.
      */
     public static void main(String[] args) {
         //declarar variables

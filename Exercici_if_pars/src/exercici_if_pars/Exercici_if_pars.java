@@ -37,7 +37,7 @@ public class Exercici_if_pars {
         }
         if (num1%2 != 0 && num2%2 != 0){
             System.out.println("El "+num1+" no es par");
-            System.out.println("El "+ num2+ "no es par");
+            System.out.println("El "+ num2+ " no es par");
         }
     }
     

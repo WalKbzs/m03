@@ -14,6 +14,9 @@ public class Exercici5 {
 
     /**
      * @param args the command line arguments
+     * como dato de entrada un número que corresponde a la longitud de un radio 
+     * y nos escribe la longitud de la circunferencia(Pi * diametro), el área 
+     * del círculo(buscalo en google).
      */
     public static void main(String[] args) {
         //declarar variables

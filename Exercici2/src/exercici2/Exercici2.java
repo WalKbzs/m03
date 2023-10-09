@@ -12,6 +12,7 @@ public class Exercici2 {
 
     /**
      * @param args the command line arguments
+     * Calcular y mostar el perímetro de un cuadrado de lado igual a 5
      */
     public static void main(String[] args) {
         //declarar variables

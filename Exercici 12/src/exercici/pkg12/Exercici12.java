@@ -14,6 +14,8 @@ public class Exercici12 {
 
     /**
      * @param args the command line arguments
+     * Lee un número y me dice si es positivo o negativo, consideraremos el zero 
+     * como positivo.
      */
     public static void main(String[] args) {
         //declarar variables
