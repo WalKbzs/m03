@@ -36,10 +36,12 @@ public class Exercici2conFor {
             cont = cont + 2;
         }
         //proposat!
-        System.out.println("1 al 200 el contador va de uno en uno pero solo quiere");
-        for (cont = 0; cont  <= 200; cont = cont) {
-            
-        }
+        System.out.println("1 al 200 el contador va de uno en uno pero solo quiero los pares");
+        for (cont = 0; cont <= 200; cont = cont+1) {
+            if(cont%2==0)
+            {
+                System.out.println(cont);
+            }
     }
-    
+   } 
 }
