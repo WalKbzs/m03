@@ -36,13 +36,13 @@ public class Exercici13bucles {
         System.out.println("numero generado por random --> "+ num_correcte); 
         
       int num_usuari;
-        
+      int cont=0;
       Scanner sc = new Scanner (System.in);
       
       do{
       System.out.println("Dime un numero del 1 al 20:");
       num_usuari = sc.nextInt();
-     
+      cont++; //contador de intentos
       if(num_usuari>num_correcte){
           System.out.println("tu numero es mayor");
       }
@@ -51,6 +51,7 @@ public class Exercici13bucles {
       }
       else{
           System.out.println("Es correcto");
+          System.out.println("Numero de intentos "+ cont);
       }
       }while(num_usuari!=num_correcte);
     }
