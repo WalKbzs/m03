@@ -49,11 +49,20 @@ public class Exercici13bucles {
       else if(num_usuari<num_correcte){
                  System.out.println("tu numero es menor"); 
       }
-      else{
+     /* else{
           System.out.println("Es correcto");
           System.out.println("Numero de intentos "+ cont);
+      }*/
+      
+      }while(num_usuari!=num_correcte && cont<3);
+      //negar las condiciones para que acabe }while!(num_usuari == num_correcte || cont>=3);
+      
+      if(cont>=3){
+          System.out.println("Has perdido...");
       }
-      }while(num_usuari!=num_correcte);
+      else{
+          System.out.println("Es correcto has tardado " + cont + " intentos...");
+      }
     }
     
 }
