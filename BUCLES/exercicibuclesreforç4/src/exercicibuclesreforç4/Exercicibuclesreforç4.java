@@ -39,10 +39,9 @@ public class Exercicibuclesreforç4 {
             }
             
         }while(pin_introducido!= pin_ok && intentos<3);
-        if (intentos>3){
-            System.out.println("Has sobrepasado el límite");
-        }
+        
         System.out.println("Has hecho " + intentos+ " intentos");
+       
     }
     
 }
