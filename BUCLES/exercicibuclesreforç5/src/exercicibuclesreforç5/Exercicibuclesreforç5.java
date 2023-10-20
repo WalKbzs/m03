@@ -29,9 +29,9 @@ public class Exercicibuclesreforç5 {
         System.out.println("Dime el año actual:");
         año = sc.nextInt();
             
-        while (edad>=0){
-            System.out.println(edad+" - "+año);
-            edad= edad -1;
+        while (edad>0){
+            System.out.println(edad + " - " + año);
+            edad=edad-1;
             año = año-1;
         }
     } 

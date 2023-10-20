@@ -41,7 +41,12 @@ public class Exercicibuclesreforç4 {
         }while(pin_introducido!= pin_ok && intentos<3);
         
         System.out.println("Has hecho " + intentos+ " intentos");
-       
+        if (pin_introducido==pin_ok){
+            System.out.println("Compra realizada");
+        }
+        else{
+            System.out.println("Tarjeta bloqueada");
+        }
     }
     
 }
