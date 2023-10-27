@@ -19,26 +19,53 @@ public class Exercici2PM {
      * boolean esMayorEdad(int a) // Devuelve verdadero si a>=18, falso en caso contrario
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
-        int edad;
-        System.out.println("Dime tu edad: ");
-        edad = sc.nextInt();
-        
-        boolean resultado = esMayorEdad(edad);
-        
-        if (resultado){
+       
+        int age;
+        boolean mayor;
+        age = pedirDatoEnteroPositivo();//funcionalitat 1 pedir dato positivo
+        mayor = esMayorEdad(age);//averiguar si eres mayor de edad
+        mostrarConsolaMayorEdad(mayor);//mostrar por consola el resultado
+       
+    }
+    /**
+     * mayor de edad o no
+     * @param edad
+     * @return si a>=18 mayor edad
+     */
+    public static boolean esMayorEdad(int edad){
+      
+       if (edad>=18){
+           return true;
+       }
+       else{
+           return false;
+       }
+     
+    }
+    /**
+     * 
+     * @return 
+     */
+     public static int pedirDatoEnteroPositivo(){
+           Scanner sc = new Scanner (System.in);
+           int num;
+           System.out.println("Edad?");
+           do{
+               System.out.println("Valor debe ser superior a 0");
+               num = sc.nextInt(); 
+           }while (num<=0);
+           return num;
+       }
+     /**
+      * 
+      * @param mayor 
+      */
+     private static void mostrarConsolaMayorEdad(boolean mayor) {
+       if (mayor){
             System.out.println("Eres mayor de edad");
         }
         else{
             System.out.println("Eres menor de edad");
         }    
-    }
-    /**
-     * mayor de edad o no
-     * @param a
-     * @return si a>=18 mayor edad
-     */
-    public static boolean esMayorEdad(int a){
-       return a>=18;
     }
 }

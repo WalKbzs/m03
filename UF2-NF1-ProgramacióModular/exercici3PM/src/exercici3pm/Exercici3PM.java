@@ -19,22 +19,16 @@ public class Exercici3PM {
      * int minimo(int a, int b) // Devuelve el menor entre a y b
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
+       
         int num1, num2;
-        System.out.println("Dime dos numeros: ");
-        System.out.println("Num1:");
-        num1 = sc.nextInt();
-        System.out.println("Num2:");
-        num2 = sc.nextInt();
+        System.out.println("Pon valor 1");
+        num1 = pedirDatoEnteroPositivo();
+        System.out.println("Pon valor 2");
+        num2 = pedirDatoEnteroPositivo();
         
-        int resultado = minimo(num1,num2);
+        int mostrarMinimo = minimo(num1,num2);
+        System.out.println("El más pequeño es " + mostrarMinimo);
         
-        if (resultado == num1){
-            System.out.println("Es menor " + num2);
-        }
-        else{
-            System.out.println("Es menor " + num1);
-        }
     }
     /**
      * Devuelve el menor entre a y b
@@ -43,11 +37,26 @@ public class Exercici3PM {
      * @return 
      */
     public static int minimo(int a, int b){
+        int minimo = 0;
         if (a>b){
-            return a;
+            minimo=b;
         }
         else{
-            return b;
+            minimo = a;
         }
+        return minimo;
     }
+     /**
+     * 
+     * @return 
+     */
+     public static int pedirDatoEnteroPositivo(){
+           Scanner sc = new Scanner (System.in);
+           int num;
+           do{
+               System.out.print("Valor debe ser superior a 0: ");
+               num = sc.nextInt(); 
+           }while (num<=0);
+           return num;
+       }
 }
