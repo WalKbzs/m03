@@ -16,21 +16,38 @@ public class JuegoSorpresa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int num;
-        num = pedirNumero();
-        
-        int bola = caidaBola();
-        System.out.println("Ha salido --> " + bola);
-        
-       
-        
-       
+        int money = 100;
+        int numero_apostado, dinero_apostado, num_bola, dinero_ganado;
+        char quiero_jugar;
+        do{
+                numero_apostado = pedirNumero();
+                dinero_apostado = pedirDineroApuesta(money);
+                System.out.println(numero_apostado + " dinero --> " + dinero_apostado);
+                num_bola = caidaBola();
+                pintaAsteriscos(num_bola);
+                if (eresGanador(num_bola, numero_apostado)){//true he ganado
+                    dinero_ganado = ganancias(dinero_apostado, numero_apostado);
+                    money += dinero_ganado;
+                    System.out.println("Ganaste tienes... " + money);
+                }
+                else{//he perdido dinero apostado
+                    money -= dinero_apostado;
+                    System.out.println("Perdiste te queda... " + money);
+                }
+                quiero_jugar = seguirJugando();
+        }while(puedesJugar(quiero_jugar, money));
+        if(money<=0){
+            System.out.println("perdisteb todo");
+        }
+        else{
+            System.out.println("te vas a casa con " + money);
+        }
     }
     /**
      * pedira un numero al usuario que tiene que estar entre 1 y 38 si no, no lo devolvera Mostrara la frase "apuesta por un numero del 1 al 36 , o elige 37(impar) o 38(par)
      * @return 
      */
-    public static int pedirNumero()//hecho
+    public static int pedirNumero()
     {
          Scanner sc = new Scanner (System.in);
            int num;
@@ -65,7 +82,7 @@ public class JuegoSorpresa {
     public static boolean puedesJugar(char respuesta, int dinero)
     {
         
-        if(respuesta=='s' && dinero>0){
+        if((respuesta=='s' || respuesta == 'S') && dinero>0){
         return true;
         }else{
             return false;
@@ -147,4 +164,11 @@ public class JuegoSorpresa {
     /** funcion que pinta tantos asteriscos en una linea como el valor num, al acabar los asterisco, pinta un - y el valor del num
      * 
      */
-}
+    public static void pintaAsteriscos(int num){
+        for (int i = 0; i < num; i++) {
+        System.out.print("* ");
+        }
+        System.out.println("- " + num);
+        }
+            
+    }

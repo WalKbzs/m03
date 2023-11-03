@@ -17,12 +17,22 @@ public class PiedraPapelTijera {
      */
     public static void main(String[] args) {
         System.out.println("*** Juego piedra, papel o tijera ***");
-        int usuari = jugadaUsuari();
-        int jugada_usuari = impJugada(usuari);
-        int ordinador = jugadaOrdenador();
-        int jugada_ordinador = impJugada(ordinador);
-        int resultado = ganador(usuari, ordinador);
-        impGanador(resultado);
+        int gana, contj = 0, contm = 0;
+        int eleccion_jugador = jugadaUsuari();
+        int eleccion_maquina = jugadaOrdenador();
+        System.out.print("El jugador elige: ");
+        impJugada(eleccion_jugador);
+        System.out.print("La maquina elige: ");
+        impJugada(eleccion_maquina);
+        gana = ganador(eleccion_jugador, eleccion_maquina);
+        impGanador(gana);
+        if(gana ==1){
+            contj = aumentar_punto(contj);
+        }
+        else if(gana==2){
+            contm = aumentar_punto(contm);
+        }
+        marcador(contj, contm);
     }
     /**
      * pide al usuario una tirada al jugador
@@ -56,24 +66,27 @@ public class PiedraPapelTijera {
      * @param choose
      * @return 
      */
-    public static int impJugada (int choose){
+    public static void impJugada (int choose){
         if(choose == 0){//piedra
             System.out.println("Piedra");
         }
         else if(choose == 1){//papel
             System.out.println("Papel");
         }
-        else{//tijera
+        else if (choose == 2){//tijera
             System.out.println("Tijera");
         }    
-        return choose;
+        else{
+            System.out.println("Opción no valida");
+        }
+      
     }
     /**
      * imprime el ganador de la tirada siguiendo esta regla,  si ganador vale 0 imprimir "hay empate", si es un 1 imprimir "has ganado", si es 2 debe imprimi que ha ganado el ordenador 
      * @param ganador
      * @return 
      */
-    public static int impGanador(int ganador){
+    public static void impGanador(int ganador){
         if(ganador == 0){
             System.out.println("Hay empate");
         }
@@ -83,14 +96,15 @@ public class PiedraPapelTijera {
         else{
             System.out.println("Ha ganado el ordenador");
         }
-        return ganador;
     }
     /**
      * Imprime la puntuación de cada jugador por pantalla 
      */
     public static void marcador(int point_player1, int point_player2){
+        System.out.println("*********************");
         System.out.println("Puntuacio usuari: " + point_player1);
         System.out.println("Puntuacio ordinador: " + point_player2);
+        System.out.println("*********************");
     }
     /**
      * retorna el valor de entrada aumentado en uno
@@ -98,7 +112,8 @@ public class PiedraPapelTijera {
      * @return 
      */
     public static int aumentar_punto (int score){
-        return score + 1;
+      int score_actualizado= score +1;
+      return score_actualizado;
     }
     /**
      *  retorna 0 si hay empate, 1 si gana el jugador 1 y 2 si gana el ordenador
